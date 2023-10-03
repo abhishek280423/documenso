@@ -10,7 +10,7 @@ RUN apk add --no-cache libc6-compat
 # Copy our current monorepo
 COPY . .
 
-RUN npm ci --production
+RUN npm install
 
 # Install dependencies only when needed
 FROM base AS builder
